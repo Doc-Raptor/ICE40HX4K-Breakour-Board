@@ -260,17 +260,6 @@ F 3 "" H 6500 2100 50  0001 C CNN
 	1    6500 2100
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x07 J1
-U 1 1 60772FC7
-P 6700 2400
-F 0 "J1" H 6780 2442 50  0000 L CNN
-F 1 "SPI_PROG" H 6780 2351 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 6700 2400 50  0001 C CNN
-F 3 "~" H 6700 2400 50  0001 C CNN
-	1    6700 2400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6500 2300 6200 2300
 Wire Wire Line
@@ -351,21 +340,78 @@ F 3 "~" H 1700 3900 50  0001 C CNN
 	1    1700 3900
 	1    0    0    -1  
 $EndComp
-Text GLabel 3300 4350 0    50   Input ~ 0
+Text GLabel 6500 2800 0    50   Input ~ 0
 RESET
-Text GLabel 3300 4450 0    50   Input ~ 0
+Text GLabel 6500 2900 0    50   Input ~ 0
 DONE
 $Comp
-L Connector_Generic:Conn_01x02 J?
-U 1 1 6096701B
-P 3500 4350
-AR Path="/60481AD3/6096701B" Ref="J?"  Part="1" 
-AR Path="/6074A79C/6096701B" Ref="J8"  Part="1" 
-F 0 "J8" H 3418 4025 50  0000 C CNN
-F 1 "RES_DONE" H 3418 4116 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3500 4350 50  0001 C CNN
-F 3 "~" H 3500 4350 50  0001 C CNN
-	1    3500 4350
+L Connector_Generic:Conn_01x09 J1
+U 1 1 60624B44
+P 6700 2500
+F 0 "J1" H 6780 2542 50  0000 L CNN
+F 1 "SPI_PROG" H 6780 2451 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical" H 6700 2500 50  0001 C CNN
+F 3 "~" H 6700 2500 50  0001 C CNN
+	1    6700 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J8
+U 1 1 60637BC0
+P 3900 4600
+F 0 "J8" H 3950 4917 50  0000 C CNN
+F 1 "CBSEL" H 3950 4826 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 3900 4600 50  0001 C CNN
+F 3 "~" H 3900 4600 50  0001 C CNN
+	1    3900 4600
+	1    0    0    -1  
+$EndComp
+Text GLabel 3700 4600 0    50   Input ~ 0
+B103
+Text GLabel 4200 4600 2    50   Input ~ 0
+B104
+$Comp
+L power:GND #PWR0129
+U 1 1 60645E8F
+P 4200 4700
+F 0 "#PWR0129" H 4200 4450 50  0001 C CNN
+F 1 "GND" H 4205 4527 50  0000 C CNN
+F 2 "" H 4200 4700 50  0001 C CNN
+F 3 "" H 4200 4700 50  0001 C CNN
+	1    4200 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0130
+U 1 1 606464D0
+P 3700 4700
+F 0 "#PWR0130" H 3700 4450 50  0001 C CNN
+F 1 "GND" H 3705 4527 50  0000 C CNN
+F 2 "" H 3700 4700 50  0001 C CNN
+F 3 "" H 3700 4700 50  0001 C CNN
+	1    3700 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0131
+U 1 1 60648244
+P 4200 4500
+F 0 "#PWR0131" H 4200 4350 50  0001 C CNN
+F 1 "+3V3" H 4215 4673 50  0000 C CNN
+F 2 "" H 4200 4500 50  0001 C CNN
+F 3 "" H 4200 4500 50  0001 C CNN
+	1    4200 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0132
+U 1 1 6064885D
+P 3700 4500
+F 0 "#PWR0132" H 3700 4350 50  0001 C CNN
+F 1 "+3V3" H 3715 4673 50  0000 C CNN
+F 2 "" H 3700 4500 50  0001 C CNN
+F 3 "" H 3700 4500 50  0001 C CNN
+	1    3700 4500
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
